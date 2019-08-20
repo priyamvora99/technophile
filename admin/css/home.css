@@ -1,0 +1,16 @@
+.no-margin{
+    margin: 0px;
+    font-weight: bold;
+    
+}
+.color{
+    background-color: #4285f4;
+}
+.dt-button.green {
+    color: green;
+   
+}
+.inputCss{
+    margin: 0px;
+    padding: 0px;
+}
