@@ -17,7 +17,7 @@
 	
 //				header('Location:homepag1.php');
 
-				echo "Success";
+				echo "success";
 
 			}else{
 			

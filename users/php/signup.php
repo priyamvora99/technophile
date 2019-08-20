@@ -128,7 +128,7 @@
                 <p>With registration new world of latest products and much more opens to you! The whole process will not take you more than a minute!</p>
                 
                 <hr>
-                <form action="reg.php" method="post">
+                <!-- <form action="reg.php" method="post"> -->
                   <div class="form-group">
                     <label for="name-login">Fisrt Name</label>
                     <input id="name-login" type="text" class="form-control" name="fname" required>
@@ -139,7 +139,7 @@
                   </div>
                   <div class="form-group">
                     <label for="email-login">Email</label>
-                    <input id="email-login" type="text" class="form-control" name="useremail" required>
+                    <input id="email-login" type="email" class="form-control" name="useremail" required>
                   </div>
                   <div class="form-group">
                     <label for="password-login">Password</label>
@@ -147,28 +147,33 @@
                   </div>
                   <div class="form-group">
 					<label for="phone-login">Phone</label>
-                    <input type="text" class="form-control" name="userphone" required>
+                    <input id="phone-login" type="tel" pattern="[0-9]{10}" class="form-control" name="userphone" required>
                   </div>
                   <div class="form-group">
 					<label for="addres-login">Address</label>
-                    <input type="text" class="form-control" name="useraddress" required>
+                    <input id="addres-login" type="text" class="form-control" name="useraddress" required>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn btn-template-outlined"><i class="fa fa-user-md"></i> Register</button>
+                    <button id="registerBtn" type="submit" class="btn btn-template-outlined"><i class="fa fa-user-md"></i> Register</button>
                   </div>
-                  <?php
-              
-              if(isset($_SESSION["userExists"])){
-                
-                
-                echo "<div class='alert alert-warning' style='margin-top:20px;'>
-                    <span>User already exists with the given email please log in to continue!</span>
-                    </div>";
-                    session_destroy();
-              }
-            ?>
 
-                </form>
+                    <div class='alert alert-danger alert-dismissible' style='margin-top:20px;display:none;' id="validationMsg">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                      <span id="displayMessage"></span>
+                    </div>
+                  <!-- <?php 
+              
+              // if(isset($_SESSION["userExists"])){
+                
+                
+              //   echo "<div class='alert alert-warning' style='margin-top:20px;'>
+              //       <span>User already exists with the given email please log in to continue!</span>
+              //       </div>";
+              //       session_destroy();
+              // }
+            // ?>
+
+                 </form> -->
               </div>
              
               
